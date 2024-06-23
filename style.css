@@ -1,15 +1,18 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: 18px;
 }
+
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
   padding: 0;
-  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  text-align: center;
 }
+
 main {
   display: flex;
   flex-direction: column;
@@ -18,21 +21,70 @@ main {
   align-items: center;
 }
 
+h1, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
 figure {
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; /* Adjusts the gap between the image and the caption */
+  width: 100%; /* Ensures the figure takes the full width */
 }
 
 img {
-  max-width: 100%;
+  width: 100%; /* Ensures the image takes the full width of its container */
   height: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5%;
 }
 
 figcaption {
-  font-size: 1.5rem;
+  font-size: 0.7rem;
   font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem; /* Adds more space below the caption */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures the column takes the full width */
+  padding: 1rem; /* Optional: Adds padding to the column */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%; /* Ensures the row takes the full width */
+  justify-content: space-between;
+}
+
+.row figure {
+  flex: 1 1 calc(33.333% - 1rem); /* Ensures the figures take equal space, considering gap */
+  max-width: calc(33.333% - 1rem);
+}
+
+.row img {
+  width: 100%; /* Ensures the image takes the full width of its container */
+  height: auto;
+  object-fit: cover;
+}
+
+.text{
+  font-size: 0.6rem;
+}
+
+#leipzig {
+  background-color: lightgrey;
+}
+
+#museum {
+  background-color: lightgrey;
 }
